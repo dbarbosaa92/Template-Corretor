@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thiago Bastos | Imóveis de Alto Padrão</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#sobre" onclick="closeMobile()">Sobre</a>
+  <a href="#imoveis" onclick="closeMobile()">Imóveis</a>
+  <a href="#contato" onclick="closeMobile()">Contato</a>
+</div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Thiago <span>Bastos</span></a>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#imoveis">Imóveis</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <a href="#contato" class="nav-cta">Agendar Visita</a>
+  <div class="hamburger" id="hamburger" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-left">
+    <div class="hero-eyebrow">Corretor de Alto Padrão</div>
+    <h1 class="hero-title">
+      Transformando sonhos em<br>
+      <em>imóveis de alto padrão</em>
+    </h1>
+    <p class="hero-subtitle">
+      Trabalhando no mercado imobiliário premium, conectando famílias e investidores aos imóveis que transformam vidas.
+    </p>
+    <div class="hero-actions">
+      <a href="#contato" class="btn-primary">Fale Comigo</a>
+      <a href="#imoveis" class="btn-secondary">
+        Ver Imóveis
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">320+</span>
+        <span class="stat-label">Imóveis Vendidos</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">15</span>
+        <span class="stat-label">Anos de Experiência</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">98%</span>
+        <span class="stat-label">Satisfação</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-photo-frame">
+      <img src="/assets/Thumb-2.png" alt="Imóvel de luxo" class="hero-photo">
+      <div class="photo-badge">
+        <span class="badge-num">CRECI</span>
+        <span class="badge-text">123456-F · ES</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-deco-line">
+    <span>scroll down</span>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="sobre-inner">
+    <div class="sobre-visual reveal-left">
+      <div class="sobre-deco-rect"></div>
+      <div class="sobre-img-wrap">
+        <div class="sobre-img-placeholder">
+            <img src="/assets/foto-preto-branco.jpg" alt="Foto preto e branco ">
+        </div>
+      </div>
+      <div class="sobre-deco-rect2"></div>
+    </div>
+    <div class="sobre-content reveal-right">
+      <div>
+        <div class="section-eyebrow">Sobre</div>
+        <span class="ornament">— ✦ —</span>
+      </div>
+      <h2 class="sobre-name">Thiago Bastos</h2>
+      <p class="sobre-title-label">Especialista em Imóveis de Alto Padrão · Espírito Santo & Litoral</p>
+      <p class="sobre-text">
+        Com pouco tempo no mercado imobiliário de luxo, Thiago Bastos construiu uma reputação sólida baseada na confiança, transparência e resultados excepcionais. Especializado em imóveis residenciais e comerciais de alto padrão, oferece um serviço personalizado e exclusivo a cada cliente.
+      </p>
+      <p class="sobre-text">
+        Credenciado pelo CRECI-ES e com certificações internacionais, Thiago é referência no segmento premium, tendo intermediado negociações que somam mais de R$ 350 milhões em transações imobiliárias.
+      </p>
+      <div class="sobre-qualities">
+        <div class="quality-item">
+          <div class="quality-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div class="quality-info">
+            <h4>Confiança</h4>
+            <p>Transparência total em cada etapa da negociação.</p>
+          </div>
+        </div>
+        <div class="quality-item">
+          <div class="quality-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <div class="quality-info">
+            <h4>Experiência</h4>
+            <p>15 anos e mais de 320 negociações bem-sucedidas.</p>
+          </div>
+        </div>
+        <div class="quality-item">
+          <div class="quality-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div class="quality-info">
+            <h4>Dedicação</h4>
+            <p>Atendimento personalizado e disponibilidade plena.</p>
+          </div>
+        </div>
+        <div class="quality-item">
+          <div class="quality-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <div class="quality-info">
+            <h4>Excelência</h4>
+            <p>Padrão premium em cada detalhe da sua experiência.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMÓVEIS -->
+<section id="imoveis">
+  <div class="imoveis-header reveal">
+    <div class="section-header" style="text-align:left; margin-bottom:0;">
+      <div class="section-eyebrow">Portfólio</div>
+      <span class="ornament" style="text-align:left; display:block; margin:0.3rem 0;">— ✦ —</span>
+      <h2 class="section-title">Imóveis <em>Selecionados</em></h2>
+    </div>
+    <div class="carousel-nav">
+      <button class="carousel-btn" id="prevBtn" aria-label="Anterior">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M19 12H5M12 5l-7 7 7 7"/>
+        </svg>
+      </button>
+      <button class="carousel-btn" id="nextBtn" aria-label="Próximo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="carousel-wrap">
+    <div class="carousel-track" id="carouselTrack">
+
+      <!-- Card 1 -->
+      <div class="imovel-card">
+        <div class="imovel-img">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Penthouse Jardins">
+          <div class="imovel-badge badge-disponivel">Disponível</div>
+        </div>
+        <div class="imovel-info">
+          <h3 class="imovel-nome">Penthouse Jardins</h3>
+          <p class="imovel-loc">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Jardins, São Paulo
+          </p>
+          <div class="imovel-footer">
+            <span class="imovel-preco">R$ 4.800.000</span>
+            <span class="imovel-area">420 m²</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="imovel-card">
+        <div class="imovel-img">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Casa Alphaville">
+          <div class="imovel-badge badge-vendido">Vendido</div>
+        </div>
+        <div class="imovel-info">
+          <h3 class="imovel-nome">Casa Alphaville</h3>
+          <p class="imovel-loc">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Alphaville, Barueri
+          </p>
+          <div class="imovel-footer">
+            <span class="imovel-preco">R$ 3.200.000</span>
+            <span class="imovel-area">680 m²</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="imovel-card">
+        <div class="imovel-img">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80" alt="Cobertura Itaim">
+          <div class="imovel-badge badge-disponivel">Disponível</div>
+        </div>
+        <div class="imovel-info">
+          <h3 class="imovel-nome">Cobertura Itaim</h3>
+          <p class="imovel-loc">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Itaim Bibi, São Paulo
+          </p>
+          <div class="imovel-footer">
+            <span class="imovel-preco">R$ 6.500.000</span>
+            <span class="imovel-area">310 m²</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="imovel-card">
+        <div class="imovel-img">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Villa Marinas">
+          <div class="imovel-badge badge-reservado">Reservado</div>
+        </div>
+        <div class="imovel-info">
+          <h3 class="imovel-nome">Villa Marinas</h3>
+          <p class="imovel-loc">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Guarujá, SP
+          </p>
+          <div class="imovel-footer">
+            <span class="imovel-preco">R$ 2.900.000</span>
+            <span class="imovel-area">550 m²</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="imovel-card">
+        <div class="imovel-img">
+          <img src="https://images.unsplash.com/photo-1582063289852-62e3ba2747f8?w=800&q=80" alt="Flat Brooklin">
+          <div class="imovel-badge badge-disponivel">Disponível</div>
+        </div>
+        <div class="imovel-info">
+          <h3 class="imovel-nome">Flat Brooklin</h3>
+          <p class="imovel-loc">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Brooklin, São Paulo
+          </p>
+          <div class="imovel-footer">
+            <span class="imovel-preco">R$ 1.750.000</span>
+            <span class="imovel-area">145 m²</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="carousel-dots" id="carouselDots"></div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="section-header reveal" style="padding: 0 4rem 2rem;">
+    <div class="section-eyebrow">Contato</div>
+    <span class="ornament">— ✦ —</span>
+    <h2 class="section-title">Vamos <em>Conversar</em></h2>
+  </div>
+  <div class="contato-inner">
+    <div class="contato-left reveal-left">
+      <p class="contato-text">
+        Estou à disposição para apresentar as melhores oportunidades do mercado imobiliário premium. Entre em contato e agende uma consultoria personalizada e sem compromisso.
+      </p>
+      <div class="contact-cards">
+        <a href="https://wa.me/5511999999999" class="contact-card" target="_blank">
+          <div class="contact-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </div>
+          <div class="contact-card-info">
+            <label>WhatsApp</label>
+            <span>(11) 99999-9999</span>
+          </div>
+        </a>
+        <a href="https://instagram.com/thiagobastosimoveis" class="contact-card" target="_blank">
+          <div class="contact-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </div>
+          <div class="contact-card-info">
+            <label>Instagram</label>
+            <span>@thiagobastosimoveis</span>
+          </div>
+        </a>
+        <a href="mailto:contato@thiagobastos.com.br" class="contact-card">
+          <div class="contact-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div class="contact-card-info">
+            <label>E-mail</label>
+            <span>contato@thiagobastos.com.br</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="reveal-right">
+      <form id="contactForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="from_name" placeholder="Seu nome completo" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="from_email" placeholder="seu@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="phone" placeholder="(11) 99999-9999">
+          </div>
+          <div class="form-group">
+            <label for="interesse">Interesse</label>
+            <input type="text" id="interesse" name="interest" placeholder="Compra / Venda / Locação">
+          </div>
+          <div class="form-group full">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="message" placeholder="Descreva o imóvel que procura ou como posso ajudá-lo..."></textarea>
+          </div>
+          <div class="form-group full">
+            <button type="submit" class="btn-submit"><span>Enviar Mensagem</span></button>
+          </div>
+        </div>
+      </form>
+      <div class="form-success" id="formSuccess">
+        <div class="checkmark">✦</div>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:300; color:var(--white); margin:0.5rem 0;">Mensagem Enviada</h3>
+        <p>Obrigado pelo contato. Retornarei em breve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Rafael <span>Monteiro</span> Imóveis</div>
+  <p class="footer-copy">© 2026 Thiago Bastos Imóveis · Todos os direitos reservados</p>
+  <p class="footer-creci">CRECI-SP 123456-F</p>
+</footer>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/5527992792515" class="whatsapp-btn" target="_blank" aria-label="Falar no WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script src="index.js"></script>
+</body>
+</html>
