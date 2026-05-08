@@ -97,10 +97,22 @@
 
   // Touch/swipe
   let touchStartX = 0;
-  track.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; });
+  let touchMoved = false;
+  track.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+    touchMoved = false;
+  });
   track.addEventListener('touchend', e => {
     const dx = e.changedTouches[0].screenX - touchStartX;
-    if (Math.abs(dx) > 50) goTo(dx < 0 ? currentSlide + 1 : currentSlide - 1);
+    if (Math.abs(dx) > 50) { touchMoved = true; goTo(dx < 0 ? currentSlide + 1 : currentSlide - 1); }
+  });
+
+  // Navegação para a página do imóvel ao clicar no card
+  cards.forEach((card, i) => {
+    card.addEventListener('click', () => {
+      if (!touchMoved) window.location.href = 'imovel.html?id=' + (i + 1);
+      touchMoved = false;
+    });
   });
 
   // ── EmailJS config ──
