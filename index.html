@@ -6,6 +6,7 @@
 <title>Thiago Bastos | Imóveis de Alto Padrão</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
 </head>
@@ -191,124 +192,28 @@
   <div class="carousel-wrap">
     <div class="carousel-track" id="carouselTrack">
 
-      <!-- Card 1 -->
-      <div class="imovel-card">
-        <div class="imovel-img">
-          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Penthouse Jardins">
-          <div class="imovel-badge badge-disponivel">Disponível</div>
-        </div>
-        <div class="imovel-info">
-          <h3 class="imovel-nome">Penthouse Jardins</h3>
-          <p class="imovel-loc">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Jardins, São Paulo
-          </p>
-          <div class="imovel-footer">
-            <span class="imovel-preco">R$ 4.800.000</span>
-            <span class="imovel-area">420 m²</span>
-          </div>
-          <a class="card-cta" href="imovel.html?id=1" onclick="event.stopPropagation()">
-            Ver detalhes
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="imovel-card">
-        <div class="imovel-img">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Casa Alphaville">
-          <div class="imovel-badge badge-vendido">Vendido</div>
-        </div>
-        <div class="imovel-info">
-          <h3 class="imovel-nome">Casa Alphaville</h3>
-          <p class="imovel-loc">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Alphaville, Barueri
-          </p>
-          <div class="imovel-footer">
-            <span class="imovel-preco">R$ 3.200.000</span>
-            <span class="imovel-area">680 m²</span>
-          </div>
-          <a class="card-cta" href="imovel.html?id=2" onclick="event.stopPropagation()">
-            Ver detalhes
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="imovel-card">
-        <div class="imovel-img">
-          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80" alt="Cobertura Itaim">
-          <div class="imovel-badge badge-disponivel">Disponível</div>
-        </div>
-        <div class="imovel-info">
-          <h3 class="imovel-nome">Cobertura Itaim</h3>
-          <p class="imovel-loc">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Itaim Bibi, São Paulo
-          </p>
-          <div class="imovel-footer">
-            <span class="imovel-preco">R$ 6.500.000</span>
-            <span class="imovel-area">310 m²</span>
-          </div>
-          <a class="card-cta" href="imovel.html?id=3" onclick="event.stopPropagation()">
-            Ver detalhes
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="imovel-card">
-        <div class="imovel-img">
-          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80" alt="Villa Marinas">
-          <div class="imovel-badge badge-reservado">Reservado</div>
-        </div>
-        <div class="imovel-info">
-          <h3 class="imovel-nome">Villa Marinas</h3>
-          <p class="imovel-loc">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Guarujá, SP
-          </p>
-          <div class="imovel-footer">
-            <span class="imovel-preco">R$ 2.900.000</span>
-            <span class="imovel-area">550 m²</span>
-          </div>
-          <a class="card-cta" href="imovel.html?id=4" onclick="event.stopPropagation()">
-            Ver detalhes
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="imovel-card">
-        <div class="imovel-img">
-          <img src="https://images.unsplash.com/photo-1582063289852-62e3ba2747f8?w=800&q=80" alt="Flat Brooklin">
-          <div class="imovel-badge badge-disponivel">Disponível</div>
-        </div>
-        <div class="imovel-info">
-          <h3 class="imovel-nome">Flat Brooklin</h3>
-          <p class="imovel-loc">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            Brooklin, São Paulo
-          </p>
-          <div class="imovel-footer">
-            <span class="imovel-preco">R$ 1.750.000</span>
-            <span class="imovel-area">145 m²</span>
-          </div>
-          <a class="card-cta" href="imovel.html?id=5" onclick="event.stopPropagation()">
-            Ver detalhes
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </div>
+      <!-- Cards gerados dinamicamente pelo index.js via Supabase -->
+      <div class="card-skeleton"></div>
+      <div class="card-skeleton"></div>
+      <div class="card-skeleton"></div>
 
     </div>
   </div>
   <div class="carousel-dots" id="carouselDots"></div>
+</section>
+
+<!-- AVALIAÇÕES -->
+<section id="avaliacoes">
+  <div class="section-header reveal" style="text-align:center; padding: 0 4rem 3.5rem;">
+    <div class="section-eyebrow">Depoimentos</div>
+    <span class="ornament">— ✦ —</span>
+    <h2 class="section-title">O que dizem os <em>Clientes</em></h2>
+  </div>
+
+  <div class="avaliacoes-outer">
+    <!-- cards gerados dinamicamente via avaliacoes.json -->
+    <div class="avaliacoes-track" id="avaliacoesTrack"></div>
+  </div>
 </section>
 
 <!-- CONTATO -->
@@ -376,7 +281,7 @@
           </div>
           <div class="form-group">
             <label for="telefone">Telefone</label>
-            <input type="tel" id="telefone" name="phone" placeholder="(11) 99999-9999">
+            <input type="tel" id="telefone" name="phone" placeholder="(27) 99279-2515">
           </div>
           <div class="form-group">
             <label for="interesse">Interesse</label>
@@ -414,6 +319,8 @@
   </svg>
 </a>
 
+<script src="utils.js"></script>
+<script src="supabaseClient.js"></script>
 <script src="index.js"></script>
 </body>
 </html>

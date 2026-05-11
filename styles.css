@@ -430,6 +430,27 @@
     border-color: var(--gold);
     gap: 0.65rem;
   }
+  /* Skeleton de carregamento */
+  .card-skeleton {
+    flex: 0 0 340px; height: 400px;
+    background: var(--dark2); position: relative; overflow: hidden;
+  }
+  .card-skeleton::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent 0%, rgba(201,168,76,0.06) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.5s infinite;
+  }
+  @keyframes skeleton-shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  .carousel-empty {
+    color: var(--silver); font-size: 0.8rem; letter-spacing: 0.1em;
+    padding: 2rem 4rem;
+  }
+  @media (max-width: 640px) { .card-skeleton { flex: 0 0 280px; } }
+
   .carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 2rem; }
   .dot {
     width: 6px; height: 6px; border-radius: 50%;
@@ -610,6 +631,99 @@
     display: block; text-align: center;
     color: var(--gold-dim); font-size: 1.2rem;
     letter-spacing: 0.5em; opacity: 0.5; margin: 0.5rem 0;
+  }
+
+  /* ── AVALIAÇÕES ── */
+  #avaliacoes {
+    padding: 8rem 0;
+    background: var(--dark);
+    overflow: hidden;
+  }
+
+  .avaliacoes-outer {
+    overflow: hidden;
+    position: relative;
+  }
+  .avaliacoes-outer::before,
+  .avaliacoes-outer::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 80px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .avaliacoes-outer::before {
+    left: 0;
+    background: linear-gradient(to right, var(--dark), transparent);
+  }
+  .avaliacoes-outer::after {
+    right: 0;
+    background: linear-gradient(to left, var(--dark), transparent);
+  }
+
+  .avaliacoes-track {
+    display: flex;
+    width: max-content;
+  }
+  .avaliacoes-track.rolando {
+    animation: avaliacoes-scroll 48s linear infinite;
+  }
+  .avaliacoes-outer:hover .avaliacoes-track.rolando {
+    animation-play-state: paused;
+  }
+
+  @keyframes avaliacoes-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .avaliacao-card {
+    width: 320px;
+    flex-shrink: 0;
+    margin-right: 1.5rem;
+    background: #222222;
+    border: 1px solid rgba(201,168,76,0.25);
+    border-top: 3px solid var(--gold);
+    padding: 1.8rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    min-height: 200px;
+  }
+
+  .avaliacao-stars { font-size: 1.1rem; letter-spacing: 0.08em; }
+  .avaliacao-stars span { color: var(--gold); }
+  .avaliacao-stars .star-empty { color: rgba(201,168,76,0.2); }
+
+  .avaliacao-texto {
+    font-size: 0.82rem;
+    color: var(--silver-light);
+    line-height: 1.85;
+    font-weight: 300;
+    font-style: italic;
+    flex: 1;
+  }
+
+  .avaliacao-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-top: 0.9rem;
+    border-top: 1px solid rgba(201,168,76,0.1);
+  }
+  .avaliacao-nome {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+  }
+  .avaliacao-data {
+    font-size: 0.62rem;
+    color: var(--text-muted);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
   }
 
   /* ── DETALHE DO IMÓVEL ── */

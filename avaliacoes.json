@@ -1,0 +1,38 @@
+[
+  {
+    "nome": "Carlos Mendonça",
+    "estrelas": 5,
+    "comentario": "Experiência incrível do início ao fim. Thiago encontrou exatamente o que eu buscava e tornou toda a negociação simples e transparente. Profissional de alto nível que recomendo sem hesitar.",
+    "data": "15 mar. 2024"
+  },
+  {
+    "nome": "Ana Paula Vieira",
+    "estrelas": 5,
+    "comentario": "Profissionalismo exemplar. Não apenas vendeu o imóvel rapidamente, mas conseguiu um valor acima do esperado. Atendimento que faz toda a diferença no mercado premium.",
+    "data": "28 fev. 2024"
+  },
+  {
+    "nome": "Roberto Almeida",
+    "estrelas": 5,
+    "comentario": "Minha família encontrou a casa dos sonhos graças ao Thiago. Ele entendeu nosso estilo de vida e apresentou opções perfeitas. Atendimento personalizado de verdade.",
+    "data": "10 jan. 2024"
+  },
+  {
+    "nome": "Fernanda Costa",
+    "estrelas": 4,
+    "comentario": "Atendimento diferenciado, muito acima do esperado. O Thiago domina o mercado de alto padrão e nos deu total segurança em cada etapa da compra. Muito satisfeita com o resultado.",
+    "data": "5 abr. 2024"
+  },
+  {
+    "nome": "Marcos Oliveira",
+    "estrelas": 5,
+    "comentario": "Desde o primeiro contato o Thiago demonstrou conhecimento profundo do mercado. Encontrou nosso apartamento ideal em menos de duas semanas. Resultado surpreendente.",
+    "data": "22 mar. 2024"
+  },
+  {
+    "nome": "Juliana Santos",
+    "estrelas": 5,
+    "comentario": "Superou todas as expectativas. Processo transparente, comunicação clara e um resultado incrível. Já indiquei para toda a família e todos adoraram o serviço e a atenção aos detalhes.",
+    "data": "18 abr. 2024"
+  }
+]
