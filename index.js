@@ -1,5 +1,3 @@
-  document.querySelectorAll('a, button, .quality-item').forEach(addCursorHover);
-
   // ── Scroll Reveal ──
   const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
   const revealObs = new IntersectionObserver((entries) => {
@@ -115,7 +113,6 @@
         if (!touchMoved) window.location.href = 'imovel.html?id=' + pid;
         touchMoved = false;
       });
-      addCursorHover(card);
     });
 
     buildDots();

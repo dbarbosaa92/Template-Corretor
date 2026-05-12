@@ -1,5 +1,3 @@
-document.querySelectorAll('a, button').forEach(addCursorHover);
-
 // ── Helpers ──
 function val(v, fallback) {
   return (v !== null && v !== undefined && v !== '') ? v : (fallback != null ? fallback : '—');
