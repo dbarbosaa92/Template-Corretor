@@ -40,7 +40,7 @@ async function loadImovel() {
   }
 
   // ── Título da aba ──
-  document.title = val(property.nome, 'Imóvel') + ' | Thiago Bastos';
+  document.title = val(property.nome, 'Imóvel') + ' | Alan Carvalho';
 
   // ── Galeria de fotos ──
   const imagens = toArray(property.imagens);
